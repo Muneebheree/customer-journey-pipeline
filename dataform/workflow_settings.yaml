@@ -1,0 +1,3 @@
+defaultSchema: customer_journey_analytics
+assertionSchema: dataform_assertions
+defaultDatabase: your_project_id
