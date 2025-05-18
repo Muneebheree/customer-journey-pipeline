@@ -1,3 +1,5 @@
-defaultSchema: customer_journey_analytics
-assertionSchema: dataform_assertions
-defaultDatabase: your_project_id
+defaultProject: customer_journey_pipeline
+defaultLocation: US
+defaultDataset: customer_journey_staging
+defaultAssertionDataset: dataform_assertions
+dataformCoreVersion: 3.0.0

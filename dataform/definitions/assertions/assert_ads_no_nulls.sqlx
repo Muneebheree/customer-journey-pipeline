@@ -1,0 +1,7 @@
+config {
+  type: "assertion"
+}
+
+SELECT *
+FROM ${ref("ads_clean")}
+WHERE user_id IS NULL OR event_time IS NULL;

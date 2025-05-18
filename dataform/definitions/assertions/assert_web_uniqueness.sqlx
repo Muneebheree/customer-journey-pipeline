@@ -1,0 +1,8 @@
+config {
+  type: "assertion"
+}
+
+SELECT user_id, event_time, funnel_stage, COUNT(*) AS dup_count
+FROM ${ref("web_clean")}
+GROUP BY user_id, event_time, funnel_stage
+HAVING COUNT(*) > 1;

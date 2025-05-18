@@ -1,0 +1,31 @@
+config {
+  type: "table"
+}
+
+SELECT
+  'ads' AS dataset,
+  COUNT(*) AS total_rows,
+  COUNTIF(user_id IS NULL) AS missing_user_id,
+  COUNTIF(event_time IS NULL) AS missing_event_time,
+  CURRENT_TIMESTAMP() AS checked_at
+FROM uber-data-muneeb.customer_journey_staging.ads_clean
+
+UNION ALL
+
+SELECT
+  'web' AS dataset,
+  COUNT(*) AS total_rows,
+  COUNTIF(user_id IS NULL) AS missing_user_id,
+  COUNTIF(event_time IS NULL) AS missing_event_time,
+  CURRENT_TIMESTAMP() AS checked_at
+FROM uber-data-muneeb.customer_journey_staging.web_clean
+
+UNION ALL
+
+SELECT
+  'email' AS dataset,
+  COUNT(*) AS total_rows,
+  COUNTIF(user_id IS NULL) AS missing_user_id,
+  COUNTIF(event_time IS NULL) AS missing_event_time,
+  CURRENT_TIMESTAMP() AS checked_at
+FROM uber-data-muneeb.customer_journey_staging.email_clean

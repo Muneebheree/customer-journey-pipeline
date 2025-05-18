@@ -1,0 +1,7 @@
+config {
+  type: "assertion"
+}
+
+SELECT *
+FROM ${ref("web_clean")}
+WHERE channel NOT IN ('web', 'website');
