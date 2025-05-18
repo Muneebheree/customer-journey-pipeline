@@ -17,7 +17,7 @@ To simulate a real-world multi-touch marketing attribution pipeline that:
 
 ## Architecture
 
-![architecture](diagrams/Blank diagram.png)
+![architecture](diagrams/architecture.png)
 
 - Key GCP Services Used:
 
